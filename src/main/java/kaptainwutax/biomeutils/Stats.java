@@ -7,9 +7,12 @@ public class Stats {
     // simple way to obain statistics
     private static final AtomicLongMap<Object> messStats = AtomicLongMap.create();
 
+    public static boolean LOGGING = false;
+
     public static StatsCallback statsCallback;
 
     public static void incr(String mess) {
+        if (!LOGGING) return;
         long c = messStats.incrementAndGet(mess);
         if (statsCallback != null) {
             statsCallback.log(messStats, mess, c);

@@ -96,10 +96,10 @@ public class Test {
                 count2++;
             }
             if (seed > 1500000) {
-                System.out.println("total branch 1: desert, savannah, plains " + Stats.getCount("count1") / (float) Stats.getCount("total") * 100 + "%");
-                System.out.println("total branch 2: forest, daark forest, plains, mountains, birch forest, swamp " + Stats.getCount("count2") / (float) Stats.getCount("total") * 100 + "%");
-                System.out.println("total branch 3: forest, mountains, taiga, plains " + Stats.getCount("count3") / (float) Stats.getCount("total") * 100 + "%");
-                System.out.println("total branch 4: snowy tundra, snowy taiga " + Stats.getCount("count4") / (float) Stats.getCount("total") * 100 + "%");
+                System.out.println("total branch 1: desert, savannah, plains " + Stats.getCount("branch1") / (float) Stats.getCount("total") * 100 + "%");
+                System.out.println("total branch 2: forest, daark forest, plains, mountains, birch forest, swamp " + Stats.getCount("branch2") / (float) Stats.getCount("total") * 100 + "%");
+                System.out.println("total branch 3: forest, mountains, taiga, plains " + Stats.getCount("branch3") / (float) Stats.getCount("total") * 100 + "%");
+                System.out.println("total branch 4: snowy tundra, snowy taiga " + Stats.getCount("branch4") / (float) Stats.getCount("total") * 100 + "%");
                 System.out.println("total mushroom branch " + Stats.getCount("shroom") / (float) Stats.getCount("total") * 100 + "%");
                 System.out.println("total giant taiga " + Stats.getCount("taiga") / (float) Stats.getCount("total") * 100 + "%");
                 System.out.println("total mesaa " + Stats.getCount("mesa") / (float) Stats.getCount("total") * 100 + "%");
