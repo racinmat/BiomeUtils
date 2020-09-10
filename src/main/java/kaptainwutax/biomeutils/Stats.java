@@ -11,7 +11,7 @@ public class Stats {
         long c = messStats.incrementAndGet(mess);
         if (c % Math.pow(10.0, Math.log10(c)) == 0.0) {
 //        if(c % 10_000 == 0) {
-            System.out.println("Times of message: $mess: $c");
+            System.out.println("Times of message: " + mess + ": " + c);
         }
     }
 
