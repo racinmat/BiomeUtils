@@ -16,6 +16,9 @@ repositories {
 dependencies {
     implementation('com.github.KaptainWutax:MathUtils:6c2d50eacad0241ff76119e6e703b70bac4b4bce') {transitive = false}
     implementation('com.github.racinmat:SeedUtils:faac899d051b70457b18aff15780dd6b5911bd97') {transitive = false}
+//    because of AtomicLong
+    implementation 'com.google.guava:guava:29.0-jre'
+
     testImplementation('org.junit.jupiter:junit-jupiter-api:5.4.2')
     testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
 }

@@ -2,6 +2,7 @@ package kaptainwutax.biomeutils.measureShortcut;
 
 
 import kaptainwutax.biomeutils.Biome;
+import kaptainwutax.biomeutils.Stats;
 import kaptainwutax.biomeutils.layer.BiomeLayer;
 import kaptainwutax.biomeutils.layer.land.BaseBiomesLayer;
 import kaptainwutax.biomeutils.layer.land.ContinentLayer;
@@ -95,30 +96,30 @@ public class Test {
                 count2++;
             }
             if (seed > 1500000) {
-                System.out.println("total branch 1: desert, savannah, plains " + BaseBiomesLayer.count1 / (float) BaseBiomesLayer.total * 100 + "%");
-                System.out.println("total branch 2: forest, daark forest, plains, mountains, birch forest, swamp " + BaseBiomesLayer.count2 / (float) BaseBiomesLayer.total * 100 + "%");
-                System.out.println("total branch 3: forest, mountains, taiga, plains " + BaseBiomesLayer.count3 / (float) BaseBiomesLayer.total * 100 + "%");
-                System.out.println("total branch 4: snowy tundra, snowy taiga " + BaseBiomesLayer.count4 / (float) BaseBiomesLayer.total * 100 + "%");
-                System.out.println("total mushroom branch " + BaseBiomesLayer.countd / (float) BaseBiomesLayer.total * 100 + "%");
-                System.out.println("total giant taiga " + BaseBiomesLayer.countgianttaiga / (float) BaseBiomesLayer.total * 100 + "%");
-                System.out.println("total mesaa " + BaseBiomesLayer.countmesa / (float) BaseBiomesLayer.total * 100 + "%");
-                System.out.println("total jungle " + BaseBiomesLayer.countjungle / (float) BaseBiomesLayer.total * 100 + "%");
-                System.out.println("total ocean or mushroom " + BaseBiomesLayer.count / (float) BaseBiomesLayer.total * 100 + "%");
+                System.out.println("total branch 1: desert, savannah, plains " + Stats.getCount("count1") / (float) Stats.getCount("total") * 100 + "%");
+                System.out.println("total branch 2: forest, daark forest, plains, mountains, birch forest, swamp " + Stats.getCount("count2") / (float) Stats.getCount("total") * 100 + "%");
+                System.out.println("total branch 3: forest, mountains, taiga, plains " + Stats.getCount("count3") / (float) Stats.getCount("total") * 100 + "%");
+                System.out.println("total branch 4: snowy tundra, snowy taiga " + Stats.getCount("count4") / (float) Stats.getCount("total") * 100 + "%");
+                System.out.println("total mushroom branch " + Stats.getCount("shroom") / (float) Stats.getCount("total") * 100 + "%");
+                System.out.println("total giant taiga " + Stats.getCount("taiga") / (float) Stats.getCount("total") * 100 + "%");
+                System.out.println("total mesaa " + Stats.getCount("mesa") / (float) Stats.getCount("total") * 100 + "%");
+                System.out.println("total jungle " + Stats.getCount("jungle") / (float) Stats.getCount("total") * 100 + "%");
+                System.out.println("total ocean or mushroom " + Stats.getCount("shroomOrOcean") / (float) Stats.getCount("total") * 100 + "%");
                 System.out.println();
                 System.out.println("###################CLIMATE#######################3");
                 System.out.println();
-                System.out.println("total Cold Forest " + ClimateLayer.countColdForest / (float) ClimateLayer.totalCold * 100 + "%");
-                System.out.println("total Cold Mountains " + ClimateLayer.countColdMountains / (float) ClimateLayer.totalCold * 100 + "%");
-                System.out.println("total Cold Plains " + ClimateLayer.countColdPlains / (float) ClimateLayer.totalCold * 100 + "%");
+                System.out.println("total Cold Forest " + Stats.getCount("coldForest") / (float) Stats.getCount("totalCold") * 100 + "%");
+                System.out.println("total Cold Mountains " + Stats.getCount("coldMountains") / (float) Stats.getCount("totalCold") * 100 + "%");
+                System.out.println("total Cold Plains " + Stats.getCount("coldPlains") / (float) Stats.getCount("totalCold") * 100 + "%");
                 System.out.println();
-                System.out.println("total Temp Normal " + ClimateLayer.countTempNormal / (float) ClimateLayer.totalTemp * 100 + "%");
-                System.out.println("total Temp Desert " + ClimateLayer.countTempDesert / (float) ClimateLayer.totalTemp * 100 + "%");
+                System.out.println("total Temp Normal " + Stats.getCount("tempNormal") / (float) Stats.getCount("totalTemp") * 100 + "%");
+                System.out.println("total Temp Desert " + Stats.getCount("tempDesert") / (float) Stats.getCount("totalTemp") * 100 + "%");
                 System.out.println();
-                System.out.println("total Cool Normal " + ClimateLayer.countCoolNormal / (float) ClimateLayer.totalCool * 100 + "%");
-                System.out.println("total Cool Mountains " + ClimateLayer.countCoolMountains / (float) ClimateLayer.totalCool * 100 + "%");
+                System.out.println("total Cool Normal " + Stats.getCount("coolNormal") / (float) Stats.getCount("totalCool") * 100 + "%");
+                System.out.println("total Cool Mountains " + Stats.getCount("coolMountains") / (float) Stats.getCount("totalCool") * 100 + "%");
                 System.out.println();
-                System.out.println("total Special Normal " + ClimateLayer.countSpecialNormal / (float) ClimateLayer.totalSpe * 100 + "%");
-                System.out.println("total Special Spec " + ClimateLayer.countSpecialSpe / (float) ClimateLayer.totalSpe * 100 + "%");
+                System.out.println("total Special Normal " + Stats.getCount("specialNormal") / (float) Stats.getCount("totalSpe") * 100 + "%");
+                System.out.println("total Special Spec " + Stats.getCount("specialSpe") / (float) Stats.getCount("totalSpe") * 100 + "%");
                 System.out.println();
                 System.out.println("###################BIOME#######################3");
                 System.out.println("Targeted " + biome.getName() + " over total: " + count2 / (float) count * 100 + "% compared to standard deviated probability:" + count2 / (float) seed * 100 + "%");
