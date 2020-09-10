@@ -7,11 +7,12 @@ public class Stats {
     // simple way to obain statistics
     private static final AtomicLongMap<Object> messStats = AtomicLongMap.create();
 
+    public static StatsCallback statsCallback;
+
     public static void incr(String mess) {
         long c = messStats.incrementAndGet(mess);
-        if (c % Math.pow(10.0, Math.round(Math.log10(c))) == 0.0) {
-//        if(c % 10_000 == 0) {
-            System.out.println("Times of message: " + mess + ": " + c);
+        if (statsCallback != null) {
+            statsCallback.log(messStats, mess, c);
         }
     }
 
